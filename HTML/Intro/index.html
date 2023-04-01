@@ -1,0 +1,128 @@
+ <!DOCTYPE html> <!-- esta línea es importante para que sea interpretado correctamente le archivo HTML -->
+<html> <!-- Esta es la etiqueta raiz de todo archivo html -->
+<head> <!-- Dentro de esta etiqueta podemos agregar características que va a tener nuestra página web que no necesariamente van a ser visibles por el usuario -->
+    <title>Mi primera Web</title>
+   <!--Algo de CSS para las tablas-->
+   <style>
+        table, th, td {
+            border: 1px solid magenta;
+        }
+    </style>
+</head>
+<body> <!-- En el body se encuentra todo e contenido de la web -->
+    <h1>Mi primer heading</h1> <!-- h1 no es para mostrar un texto más grande, sino para indicara una jerarquía de título-->
+    <h2>Mi segundo heading</h2>
+    <h3>Mi tercer heading</h3>
+    <h4>Mi cuarto heading</h4>
+    <h5>Mi quinto heading</h5>
+    <h6>chanchito feliz</h6> <!-- Este es el último nivel de heading disponible -->
+
+    <p>Chanchito feliz está muy feliz</p> <!--p es de párrafo-->
+    <p>Chanchito triste está muy triste</p> <!--Así se agrega otro párrafo-->
+    <hr> <!-- hace una línea que separa secciones-->
+    <h2>Chanchito Felipe</h2>
+    <p>
+        Este texto es <span style="color: blue;">  mucho más largo</span> y es para
+        la etiqueta de span!
+        <!-- La etiqueta de span selecciona silenciosamente (de forma no visible con HTML) parte del texto-->
+        <!-- 'style'es CSS-->
+    </p>
+
+    <a href="https://www.google.com">Ir a google</a> <!--la etiqueta a (anchore) linkea-->
+    <a target='_blank' href="https://www.google.com">Ir a google en otra pestaña</a>
+    <br> <!-- Quiebre (break) de línea-->
+    <img src='istockphoto-1390307383-1024x1024.jpg' width="400"/> <!--Esta etiqueta no se cierra con una final, 
+        se cierra dentro de ella misma. Witdh da el tamaño del ancho, si solo se pasa una dimensión,incluyendo height, sin dañar las proporciones
+        pero si se ponen ambos con diferentes valores, la imagen se va a deformar-->
+    <form action="/formulario" method="post"> <!-- Las indicaciones para expresar a dónde vamos a enviar la info colectada de los formularios-->
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Chanchito"/> <!-- id relaciona el label con el input, toma el valor de for en label. 
+        name es para rescatar el valor ingresado para su uso en alguna funcionalidad
+        Placeholder pone el nombre del dato dentro de la cajita de input-->
+        <!-- el type por default es text, en caso de no escribirlo se asumirá que es este.
+        por otro lado, existen los tipos submit, email, password, radio, checkbox-->
+        <br>
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Ej: Pérez"/> <!--Para poner valores por defectos en etiquetas input se utiliza value-->
+        <br>
+        <label for="apellido">Comentario</label>
+        <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="ingrese comentario">Este es un valor por defecto</textarea>
+        <br>
+        <input type="submit"/>
+        <button type='reset'>Tipo reset</button>
+        <button type='button'>Tipo botón</button>
+        <button type='submit'>Tipo enviar/submit</button>
+    </form>
+    <br>
+    <!--Listas no ordenadas: ul, apareceran con un punto como marcador-->
+    <ul>
+        <li>Elemento uno</li>
+        <li>Elemento dos</li>
+        <li>Elemento tres</li>
+        <li>Elemento cuatro</li>
+        <li>Elemento cinco</li>
+    </ul>
+    <!--Listas ordenadas: ol-->
+    <ol>
+        <li>Elemento uno</li> 
+        <li>Elemento dos</li>
+        <li>Elemento tres</li>
+        <li>Elemento cuatro</li>
+        <li>Elemento cinco</li>
+    </ol>
+    <!--Listas anidadas-->
+    <ol>
+        <li value="50">Elemento uno</li> <!--value indica desde cuál número iniciar en este caso-->
+        <li>Elemento dos</li>
+            <ol>
+                <li>subelemento 1</li>
+                <li>subelemento 2</li>
+                <li>subelemento 3</li>
+                <li>subelemento 4</li>
+            </ol>
+        <li>Elemento tres</li>
+            <ul>
+                <li>subelemento 1</li>
+                <li>subelemento 2</li>
+                <li>subelemento 3</li>
+                <li>subelemento 4</li>
+            </ul>
+        <li>Elemento cuatro</li>
+            <ol>
+                <li style="list-style-type:lower-alpha;">subelemento 1</li>
+                <li style="list-style-type:lower-alpha;">subelemento 2</li>
+                <li style="list-style-type:lower-alpha;">subelemento 3</li>
+                <li style="list-style-type:lower-alpha;">subelemento 4</li>
+            </ol>
+        <li>Elemento cinco</li>
+    </ol>
+    <table style="width: 500px;">
+       <thead> <!--ESTA ETIQUETA NO ES NECESARIA, sirve para que los navegadores hagan match con este heading de tabla-->
+            <tr> <!--rows-->
+                <th>Producto</th> <!--Table heading-->
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody> <!-- complementario a thead y también es para hacer match con los navegadores-->
+            <tr> 
+                <td>Hola Beats</td> <!--elementos standares-->
+                <td>Gratis</td>
+            </tr>
+            <tr> 
+                <td>Chanchito fachero</td> <!--elementos standares-->
+                <td>$19,900</td>
+            </tr>
+            <tr> 
+                <td>Chanchito fachero edición limitada halloween</td> <!--elementos standares-->
+                <td>$39,900</td>
+            </tr>
+        </tbody>
+        <!--la suguiente fila va a quedar por fuera del table heading y el table body-->
+        <tr>
+            <td></td> <!--Celda vacía-->
+            <td>Total: $59,800</td>
+        </tr>
+    </table>
+
+</body>
+</html>
