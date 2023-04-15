@@ -1,0 +1,58 @@
+#titulo { /* con un # más el id se puede especificar a qué elemento se está haciendo referencia para intervenir en su estilo*/
+    color: tomato;
+}
+/*En este caso, con un . más la clase se hace referencia al elemento e interés*/
+p.texto { /*todas las etiquetas de p que tengan la clase de 'text' tiene que agrgarles el color indicado*/
+    color: slateblue;
+}
+/*Antes del punto se puede colocar la etiqueta sobre la que queremos que haga efecto y después del punto una palabra que contenga cualsea la clase.*/
+p.especial { /*todas las etiquetas de p que contengan dentro de la clase la palabra 'especial' tiene que agrgarles el color indicado*/
+    color: mediumseagreen;
+}
+
+/*A todas las etiquetas de p que se encuentren dentro de un div se les asignará el siguiente estilo*/
+
+div p {
+    color:aquamarine;
+}
+
+div h2, div h3 {
+    color: brown;
+}
+
+/*Selector * selecciona todo, y solo se aplicará para los casos en los que no haya sido definida por otros selectores */
+*{
+    font-size: 24px;
+    color: black; /*solo aplicará a lo que no se le haya definido un estilo, no sobreescribirá sobre lo otro*/
+}
+
+.color {
+    text-align: center;
+    /*color: #ff0000;*/ /*convención hexagecimal*/
+    color: rgb(255,0,0); /*convención RGB*/
+    /* border: 5px blueviolet solid; */
+    /*Alternativas a solid:
+    dotted
+    dashed
+    double
+    groove 3d
+    ridge 3d
+    inset 3d
+    outset 3d
+    none
+    hidden */
+    border-style: solid;
+    border-color: aqua;
+    border-radius: 5px; /*Borde redondeado*/
+    border-width: 5px;
+}
+
+#fondo {
+    text-align: center;
+    color: brown;
+    /*background-color: rgba(0,0,0,0.5);*/ /* a es la opacidad y va de 1 a 0*/
+    /*background-image: url(coffee.png);
+    background-size: auto;
+    height: 100px;
+    background-repeat: no-repeat;*/
+}
